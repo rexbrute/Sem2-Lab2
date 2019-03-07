@@ -1,3 +1,7 @@
+--------------------------2. Să se creeze o funcție primește ca argument un tablou care afișează o matrice
+bidimensionala sub forma unui tablou.---------------------------
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -25,7 +29,7 @@ int main()
     return 0;
 }
 
-...............
+------------------------------1. Să se calculeze suma elementelor unei matrice-----------------------
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -52,7 +56,10 @@ int tab[50][50];
 
     return 0;
 }
-............
+----------------------------------------------2. Să se creeze o funcție primește ca argument un tablou care afișează o matrice
+bidimensionala sub forma unui tablou.------------------------(VARIANTA MEA)
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -79,7 +86,9 @@ max=rand*col;
 
     return 0;
 }
-..........
+
+-----------------------------3. Să se calculeze suma a două matrice A, B de aceeași dimensiune---------------------------------.
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -113,7 +122,7 @@ scanf("%d", &col);
     return 0;
 }
 
-.........
+----------------------4. Să se afișeze elementele de pe diagonala unei matrice pătratică citită de la tastatură. Să se calculeze suma acestor elemente.------------------------
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -136,36 +145,3 @@ int col=rand;
     return 0;
 }
 
-........
-
-#include <stdio.h>
-#include <stdlib.h>
-
-int main()
-{
-   int g,aux,k,z,a,b,tab[50][50],i,j,randB,colB,randA,colA,A[50][50],B[50][50],C[50][50];
-printf("Randuri= ");
-scanf("%d", &randA);
-printf("Coloane= ");
-scanf("%d", &colA);
-  for(i = 0; i < randA;i++){
- for(j = 0; j < colA; j++){
- printf("A[%d][%d]=", i,j);
- scanf("%d", &A[i][j]);
- }
- }
- printf("Randuri= ");
-scanf("%d", &randB);
-printf("Coloane= ");
-scanf("%d", &colB);
- for(i = 0; i < randB;i++){
- for(j = 0; j < colB; j++){
- printf("B[%d][%d]=", i,j);
- scanf("%d", &B[i][j]);
- }
- }
- for(a=0,b=0;a<randA,b<colB;a++,b++)for(i = 0,g=0,k=0,j=0;g<randA&&g<colB,k<randB, j < colA;k++,j++){aux[g]+=A[i][j]*
- B[k][j];}
-
-    return 0;
-}
