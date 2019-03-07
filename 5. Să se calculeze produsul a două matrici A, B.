@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int randA,randB,colA,colB,i,j,k,A[50][50],B[50][50],C[50][50];
+    printf("Randuri= ");
+    scanf("%d", &randA);
+    printf("Coloane= ");
+    scanf("%d", &colA);
+    for(i = 0; i < randA; i++)
+    {
+        for(j = 0; j < colA; j++)
+        {
+            printf("A[%d][%d]=", i,j);
+            scanf("%d", &A[i][j]);
+        }
+    }
+    printf("Randuri= ");
+    scanf("%d", &randB);
+    printf("Coloane= ");
+    scanf("%d", &colB);
+    for(i = 0; i < randB; i++)
+    {
+        for(j = 0; j < colB; j++)
+        {
+            printf("B[%d][%d]=", i,j);
+            scanf("%d", &B[i][j]);
+        }
+    }
+    for(i=0; i<randA; i++)
+    {
+        for(j=0; j<colB; j++)
+        {
+            for(k=0; k<colA; k++)
+            {
+                C[i][j]+=A[i][k]*B[k][j];
+            }
+        }
+    }
+    printf("Produsul celor doua matrice a rezultat matricea C: ");
+    for(i=0; i<randA; i++)
+    {
+        for(j=0; j<colB; j++)
+            printf("%4d", C[i][j]);
+    }
+    return 0;
+}
