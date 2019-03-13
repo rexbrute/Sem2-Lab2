@@ -1,2 +1,40 @@
 6. Se citeste o matrices n*m cu elemente intregi. Sa se determine elementul care
 apar de cele mai multe ori in matrice si de cate ori apare el.
+
+#include <stdio.h>
+#include <stdlib.h>
+int x[100][100],v[1000000];
+int main()
+{
+int n,m,nrmaxim=0,solutii[100], z=0,maximap=0;
+printf("Numar linii= ");
+scanf("%d",&n);
+printf("Numar coloane= ");
+scanf("%d",&m);
+ for(int i=0;i<n;i++)
+for(int j=0;j<m;j++)
+{
+printf("x[%d][%d]= ",i,j);
+scanf("%d", &x[i][j]);
+ v[x[i][j]]++;
+if(x[i][j]>nrmaxim) nrmaxim=x[i][j];
+}
+
+ for(int i=1;i<=nrmaxim;i++)
+if(v[i]>maximap) maximap=v[i];
+ for(int i=1;i<=nrmaxim;i++)
+{
+if(v[i]==maximap)
+{
+z++;
+solutii[z]=i;
+
+}
+}
+for(int i=1;i<=z;i++)
+printf("%d",solutii[z]);
+printf("\nNr aparitii: %d", maximap);
+return 0;
+}
+
+
